@@ -1,6 +1,6 @@
 package com.hachi.mall.config;
 
-import org.springframework.context.annotation.ComponentScan;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -9,6 +9,6 @@ import org.springframework.context.annotation.Configuration;
  * @date 2020/8/3 19:59
  */
 @Configuration
-@ComponentScan("com.hachi.mall.mbg.mapper")
+@MapperScan("com.hachi.mall.mbg.mapper")
 public class MyBatisConfig {
 }
