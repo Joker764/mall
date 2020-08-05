@@ -22,6 +22,7 @@ spring:
 mybatis:
   mapper-locations:
     - classpath:mapper/*.xml
+    - classpath:dao/*.xml
     - classpath*:com/**/mapper/*.xml
 
 redis:
@@ -30,3 +31,9 @@ redis:
       authCode: "portal:authCode:"
     expire:
       authCode: 120 # 验证码超期时间
+
+jwt:
+  tokenHeader: Authorization # JWT 存储的请求头
+  secret: mySecret # JWT 加解密使用的密钥
+  expiration: 604800 # JWT 的超期限时间(60*60*24)
+  tokenHead: Bearer  # JWT负载中拿到开头
